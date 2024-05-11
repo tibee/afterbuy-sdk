@@ -2,7 +2,6 @@
 
 namespace Ns\Afterbuy\Client;
 
-use Doctrine\Common\Annotations\AnnotationRegistry;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\BadResponseException;
 use Psr\Log\LoggerAwareInterface;
@@ -84,7 +83,6 @@ class Request implements LoggerAwareInterface
      */
     public function __construct($userId, $userPassword, $partnerId, $partnerPassword, $errorLanguage, $doctypeWhitelist)
     {
-        AnnotationRegistry::registerLoader('class_exists');
 
         $this->afterbuyGlobal = new AfterbuyGlobal($userId, $userPassword, $partnerId, $partnerPassword, $errorLanguage);
         $this->client = new \GuzzleHttp\Client(array('base_uri' => $this->uri));
