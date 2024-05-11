@@ -10,8 +10,6 @@ use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 use JMS\Serializer\Handler\ArrayCollectionHandler;
 use JMS\Serializer\Handler\HandlerRegistry;
-use JMS\Serializer\Handler\PhpCollectionHandler;
-use JMS\Serializer\Handler\PropelCollectionHandler;
 use JMS\Serializer\Naming\CamelCaseNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\SerializerBuilder;
@@ -114,9 +112,7 @@ class Request implements LoggerAwareInterface
         return function (HandlerRegistry $registry) {
             $registry->registerSubscribingHandler(new DateHandler());
             $registry->registerSubscribingHandler(new FloatHandler());
-            $registry->registerSubscribingHandler(new PhpCollectionHandler());
             $registry->registerSubscribingHandler(new ArrayCollectionHandler());
-            $registry->registerSubscribingHandler(new PropelCollectionHandler());
         };
     }
 
