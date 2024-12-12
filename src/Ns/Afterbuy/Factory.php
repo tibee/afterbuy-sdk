@@ -21,7 +21,7 @@ class Factory
             $config['partnerId'],
             $config['partnerPass'],
             $config['errorLang'],
-            $config['doctypeWhitelist']
+            $config['doctypeWhitelist'] ?? null,
         );
 		return $request;
 //        return $request->setLogger(new Logger('afterbuy'));
