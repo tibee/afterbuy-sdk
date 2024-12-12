@@ -19,7 +19,7 @@
         "jms/serializer": "^3.0",
         "doctrine/annotations": "^2.0"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-0": { "Ns\\Afterbuy\\": "src/" }
     }
