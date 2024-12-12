@@ -3,7 +3,6 @@
 namespace Ns\Afterbuy;
 
 use Ns\Afterbuy\Client\Request;
-use Monolog\Logger;
 
 /**
  * Class Factory
