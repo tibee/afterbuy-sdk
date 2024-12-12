@@ -17,7 +17,7 @@
     "require": {
         "guzzlehttp/guzzle": "^6.0|^7.0",
         "jms/serializer": "^3.0",
-        "doctrine/annotations": "2.0.x-dev"
+        "doctrine/annotations": "^2.0"
     },
     "minimum-stability": "dev",
     "autoload": {
