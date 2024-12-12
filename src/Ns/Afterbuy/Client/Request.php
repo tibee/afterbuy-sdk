@@ -369,7 +369,7 @@ class Request implements LoggerAwareInterface
         $this->log(LogLevel::DEBUG, 'Posted to Afterbuy with the following options: ', $options);
 
         try {
-            $response = $this->client->request('POST', null, $options);
+            $response = $this->client->request('POST', '', $options);
             $this->log(LogLevel::DEBUG, sprintf('Afterbuy response: %s', $response->getBody()));
         } catch (BadResponseException $exception) {
             $this->log(LogLevel::ERROR, $exception->getMessage());
