@@ -124,14 +124,11 @@ class Request implements LoggerAwareInterface
 
     /**
      * @param LoggerInterface $logger
-     *
-     * @return $this
+     * @return void
      */
     public function setLogger(LoggerInterface $logger)
     {
         $this->logger = $logger;
-
-        return $this;
     }
 
     /**
