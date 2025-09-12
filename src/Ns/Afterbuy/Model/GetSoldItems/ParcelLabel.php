@@ -8,7 +8,7 @@ use \DateTime;
 use Ns\Afterbuy\Model\FloatType;
 
 /**
- * Class SoldItem
+ * Class ParcelLabel
  */
 class ParcelLabel extends AbstractModel
 {

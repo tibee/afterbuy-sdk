@@ -33,6 +33,14 @@ class ShippingInfo extends AbstractShippingInfo
     protected $shippingTaxRate;
 
     /**
+     * @Serializer\Type("array<Ns\Afterbuy\Model\GetSoldItems\ParcelLabel>")
+     * @Serializer\XmlList(entry="ParcelLabel")
+     * @Serializer\SerializedName("ParcelLabels")
+     * @var ParcelLabel[]
+     */
+    protected $parcelLabels;
+
+    /**
      * @return float
      */
     public function getShippingAdditionalCost()
@@ -55,4 +63,13 @@ class ShippingInfo extends AbstractShippingInfo
     {
         return $this->shippingTaxRate->getValue();
     }
+
+    /**
+     * @return ParcelLabel[]
+     */
+    public function getParcelLabels()
+    {
+        return $this->parcelLabels;
+    }
+
 }
